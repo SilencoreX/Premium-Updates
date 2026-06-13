@@ -459,48 +459,73 @@
 <script>
     (function() {
         // === DOWNLOAD BUTTON INTERACTION ===
-        const downloadBtn = document.getElementById('downloadBtn');
-        let isProcessing = false;
+const downloadBtn = document.getElementById('downloadBtn');
+let isProcessing = false;
 
-        function showMessage(text, isSuccess = true) {
-            const toast = document.createElement('div');
-            toast.className = 'toast-notify';
-            const icon = isSuccess ? '<i class="fas fa-check-circle" style="margin-right: 8px;"></i>' : '<i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>';
-            toast.innerHTML = icon + text;
-            document.body.appendChild(toast);
-            setTimeout(() => {
-                toast.style.animation = 'slideOut 0.25s ease-out forwards';
-                setTimeout(() => toast.remove(), 300);
-            }, 3000);
-        }
+function showMessage(text, isSuccess = true) {
+    const toast = document.createElement('div');
+    toast.className = 'toast-notify';
 
-        function startDownload() {
-            if (isProcessing) return;
-            isProcessing = true;
-            const originalHTML = downloadBtn.innerHTML;
-            downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> PREPARING UPDATE...';
-            downloadBtn.disabled = true;
-            downloadBtn.style.opacity = '0.8';
+    const icon = isSuccess
+        ? '<i class="fas fa-check-circle" style="margin-right: 8px;"></i>'
+        : '<i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>';
 
-            setTimeout(() => {
-                // open official download link (same silencorex domain)
-                window.open('https://www.dropbox.com/scl/fi/3s7htvpeohukfmc9qug13/Premium_release.apk?rlkey=exh6vlmbzs6l1844fi9mwe498&st=8fqs4i2g&dl=1', '_blank');
-                downloadBtn.innerHTML = '<i class="fas fa-check"></i> UPDATE STARTED';
-                downloadBtn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
-                showMessage('Download started! New SilenCoreX v3.0 incoming 🚀', true);
+    toast.innerHTML = icon + text;
+    document.body.appendChild(toast);
 
-                setTimeout(() => {
-                    downloadBtn.innerHTML = originalHTML;
-                    downloadBtn.disabled = false;
-                    downloadBtn.style.opacity = '1';
-                    downloadBtn.style.background = 'linear-gradient(135deg, #1DA1F2, #1A8CD8)';
-                    isProcessing = false;
-                }, 2800);
-            }, 900);
-        }
+    setTimeout(() => {
+        toast.style.animation = 'slideOut 0.25s ease-out forwards';
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
 
-        downloadBtn.addEventListener('click', startDownload);
+function startDownload() {
+    if (isProcessing) return;
 
+    isProcessing = true;
+
+    const originalHTML = downloadBtn.innerHTML;
+
+    downloadBtn.innerHTML =
+        '<i class="fas fa-spinner fa-spin"></i> PREPARING UPDATE...';
+
+    downloadBtn.disabled = true;
+    downloadBtn.style.opacity = '0.8';
+
+    // Direct download link
+    const downloadUrl =
+        'https://www.dropbox.com/scl/fi/3s7htvpeohukfmc9qug13/Premium_release.apk?rlkey=exh6vlmbzs6l1844fi9mwe498&dl=1';
+
+    // Download start
+    window.location.href = downloadUrl;
+
+    setTimeout(() => {
+        downloadBtn.innerHTML =
+            '<i class="fas fa-check"></i> UPDATE STARTED';
+
+        downloadBtn.style.background =
+            'linear-gradient(135deg, #4CAF50, #45a049)';
+
+        showMessage(
+            'Download started! New SilenCoreX v3.0 incoming 🚀',
+            true
+        );
+
+        setTimeout(() => {
+            downloadBtn.innerHTML = originalHTML;
+            downloadBtn.disabled = false;
+            downloadBtn.style.opacity = '1';
+            downloadBtn.style.background =
+                'linear-gradient(135deg, #1DA1F2, #1A8CD8)';
+
+            isProcessing = false;
+        }, 2800);
+    }, 500);
+}
+
+downloadBtn.addEventListener('click', startDownload);
+
+        
         // === DISABLE ZOOM + PREVENT PINCH ZOOM ===
         document.addEventListener('wheel', function(e) {
             if (e.ctrlKey) {
