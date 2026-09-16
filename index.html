@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="Vl79ETPD17QpWzKpYhZvO-u6EuVKPM50cSk6wLrUxzc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>PREMIUM | v2.0 Update – New Features Drop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://www.mediafire.com/file/gbbhca2ok7up3yl/Premium_Latest_Version_2.2.0.apk/file" rel="stylesheet">
+    <title>PREMIUM · v2.0 Update</title>
     <style>
-        /* ===== RESET & BASE – ZOOM LOCKED ===== */
+        /* ===== RESET & BASE — CLEAN, NO ZOOM, NO EMOJI ===== */
         * {
             margin: 0;
             padding: 0;
@@ -16,13 +13,16 @@
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
         }
+
         html {
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
             overflow-x: hidden;
+            background: #000;
         }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: #000000;
             color: #ffffff;
             line-height: 1.5;
@@ -30,540 +30,530 @@
             overflow-x: hidden;
             width: 100%;
             position: relative;
+            font-weight: 400;
         }
-        @viewport {
-            width: device-width;
-            zoom: 1.0;
-            max-zoom: 1.0;
-            min-zoom: 1.0;
-            user-zoom: fixed;
-        }
+
+        /* ===== CONTAINER ===== */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 40px 24px;
             width: 100%;
         }
-        /* header & branding */
+
+        /* ===== HEADER ===== */
         .header {
             text-align: center;
-            margin-bottom: 60px;
-            padding-top: 20px;
+            margin-bottom: 64px;
+            padding-top: 16px;
         }
+
         .logo {
-            font-size: 72px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+            font-size: 68px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -2px;
-            margin-bottom: 10px;
-            line-height: 1;
+            margin-bottom: 8px;
+            line-height: 1.1;
         }
+
         .subtitle {
-            color: #aaa;
-            font-size: 18px;
+            color: #888;
+            font-size: 16px;
             font-weight: 400;
-            letter-spacing: 8px;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: 0;
         }
-        /* launch / update badge */
+
+        /* ===== LAUNCH / UPDATE SECTION ===== */
         .launch-info {
             text-align: center;
-            margin-bottom: 50px;
-            position: relative;
+            margin-bottom: 56px;
         }
+
         .update-badge {
             display: inline-block;
-            background: rgba(29, 161, 242, 0.2);
-            border: 1px solid rgba(29, 161, 242, 0.4);
+            background: rgba(29, 161, 242, 0.12);
+            border: 1px solid rgba(29, 161, 242, 0.3);
             color: #1DA1F2;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 100px;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
             backdrop-filter: blur(4px);
         }
+
         .launch-title {
-            font-size: 42px;
+            font-size: 44px;
             font-weight: 700;
             color: #ffffff;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
+
         .launch-description {
             font-size: 18px;
             color: #aaa;
-            max-width: 700px;
+            max-width: 640px;
             margin: 0 auto;
             line-height: 1.6;
+            font-weight: 400;
         }
-        /* section styles */
-        .features-section {
-            margin: 60px 0;
-        }
+
+        /* ===== SECTION TITLE ===== */
         .section-title {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 600;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
             color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
         }
-        .section-title i {
-            font-size: 26px;
-            color: #1DA1F2;
+
+        /* ===== FEATURES GRID ===== */
+        .features-section {
+            margin: 56px 0;
         }
+
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
+
+        /* ===== FEATURE CARD — CLEAN, NO ICONS ===== */
         .feature-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 25px;
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 20px;
+            padding: 28px 20px;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: border-color 0.2s ease, background 0.2s ease;
             position: relative;
             backdrop-filter: blur(2px);
         }
+
         .feature-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
-            border-color: rgba(255, 255, 255, 0.15);
+            background: #111;
+            border-color: #2a2a2a;
         }
-        /* NEW FEATURE BADGE */
+
+        /* badges — clean, no icons inside */
         .new-badge {
             position: absolute;
-            top: 12px;
-            right: 12px;
+            top: 14px;
+            right: 14px;
             background: #1DA1F2;
             color: #000;
-            font-size: 10px;
-            font-weight: 800;
-            padding: 4px 8px;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 4px 10px;
             border-radius: 40px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
-            box-shadow: 0 0 8px rgba(29,161,242,0.6);
+            line-height: 1.2;
         }
+
         .updated-badge {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #ddd;
-            font-size: 10px;
-            font-weight: 700;
-            padding: 4px 8px;
+            top: 14px;
+            right: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 9px;
+            font-weight: 600;
+            padding: 4px 10px;
             border-radius: 40px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            line-height: 1.2;
             backdrop-filter: blur(4px);
         }
-        .feature-icon {
-            font-size: 32px;
-            color: #aaa;
-            margin-bottom: 20px;
-            height: 60px;
-            width: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-        }
+
+        /* feature name & description — no icons */
         .feature-name {
             font-size: 18px;
             font-weight: 600;
-            color: #fff;
-            margin-bottom: 10px;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.2px;
         }
+
         .feature-desc {
             font-size: 14px;
             color: #888;
             line-height: 1.5;
+            font-weight: 400;
         }
-        /* download section */
+
+        /* ===== DOWNLOAD SECTION ===== */
         .download-section {
             text-align: center;
-            margin: 80px 0;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin: 72px 0 48px;
+            padding: 48px 32px;
+            background: #0a0a0a;
+            border-radius: 24px;
+            border: 1px solid #1a1a1a;
         }
+
         .download-btn {
             display: inline-flex;
             align-items: center;
-            gap: 15px;
-            background: linear-gradient(135deg, #1DA1F2, #1A8CD8);
-            color: white;
-            padding: 20px 50px;
-            font-size: 20px;
+            justify-content: center;
+            background: #1DA1F2;
+            color: #ffffff;
+            padding: 20px 56px;
+            font-size: 18px;
             font-weight: 600;
             border-radius: 16px;
             cursor: pointer;
             border: none;
-            transition: all 0.3s ease;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
             text-decoration: none;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 14px rgba(29, 161, 242, 0.2);
         }
+
         .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(29, 161, 242, 0.3);
+            background: #1a8cd8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(29, 161, 242, 0.3);
         }
+
+        .download-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(29, 161, 242, 0.25);
+        }
+
+        .download-btn:disabled {
+            opacity: 0.7;
+            cursor: default;
+            transform: none;
+            box-shadow: none;
+        }
+
         .download-info {
-            color: #999;
-            font-size: 16px;
+            color: #777;
+            font-size: 15px;
             margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            letter-spacing: 0.2px;
+        }
+
+        /* ===== OFFER BANNER ===== */
+        .offer-banner {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 24px 28px;
+            text-align: center;
+            margin: 40px 0 24px;
+        }
+
+        .offer-text {
+            font-size: 16px;
+            color: #1DA1F2;
+            font-weight: 500;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
+            letter-spacing: 0.2px;
         }
-        .offer-banner {
-            background: linear-gradient(90deg, rgba(29, 161, 242, 0.08), rgba(29, 161, 242, 0.04));
-            border: 1px solid rgba(29, 161, 242, 0.15);
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-            margin: 40px 0;
-        }
-        .offer-text {
-            font-size: 18px;
-            color: #1DA1F2;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
+
+        /* ===== FOOTER ===== */
         .footer {
             text-align: center;
-            padding: 40px 0 20px;
-            color: #666;
+            padding: 32px 0 12px;
+            color: #555;
             font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 40px;
+            border-top: 1px solid #111;
+            margin-top: 48px;
         }
+
         .copyright {
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
+
         .company {
-            color: #aaa;
+            color: #999;
             font-weight: 500;
         }
-        @media (max-width: 768px) {
-            .container { padding: 20px 15px; }
-            .logo { font-size: 56px; }
-            .subtitle { font-size: 14px; letter-spacing: 6px; }
-            .launch-title { font-size: 32px; }
-            .launch-description { font-size: 16px; }
-            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-            .feature-card { padding: 20px; }
-            .download-btn { padding: 18px 40px; font-size: 18px; }
-            .download-section { padding: 30px 20px; margin: 50px 0; }
-        }
-        @media (max-width: 480px) {
-            .logo { font-size: 48px; }
-            .features-grid { grid-template-columns: 1fr; }
-            .launch-title { font-size: 28px; }
-            .download-btn { padding: 16px 30px; font-size: 16px; }
-            .offer-text { font-size: 16px; flex-direction: column; gap: 8px; }
-        }
-        /* notification style */
+
+        /* ===== TOAST (clean, no icons) ===== */
         .toast-notify {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 24px;
+            right: 24px;
             background: #1DA1F2;
-            color: white;
-            padding: 14px 24px;
+            color: #fff;
+            padding: 16px 28px;
             border-radius: 12px;
             z-index: 10000;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 500;
-            box-shadow: 0 5px 20px rgba(29,161,242,0.4);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
             animation: slideIn 0.25s ease-out;
+            letter-spacing: 0.2px;
+            max-width: 360px;
             backdrop-filter: blur(8px);
         }
+
         @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
+            from { transform: translateX(110%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
+
         @keyframes slideOut {
             from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(110%); opacity: 0; }
         }
-        /* disable zoom extra */
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 24px 16px; }
+            .logo { font-size: 52px; }
+            .subtitle { font-size: 13px; letter-spacing: 5px; }
+            .launch-title { font-size: 34px; }
+            .launch-description { font-size: 16px; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .feature-card { padding: 22px 14px; border-radius: 16px; }
+            .feature-name { font-size: 16px; }
+            .feature-desc { font-size: 13px; }
+            .download-btn { padding: 18px 36px; font-size: 17px; }
+            .download-section { padding: 36px 20px; margin: 56px 0 40px; }
+            .section-title { font-size: 20px; margin-bottom: 24px; }
+            .update-badge { font-size: 11px; padding: 5px 14px; }
+            .offer-text { font-size: 15px; }
+            .toast-notify { top: 16px; right: 16px; left: 16px; max-width: none; padding: 14px 20px; font-size: 14px; }
+        }
+
+        @media (max-width: 480px) {
+            .logo { font-size: 42px; }
+            .subtitle { font-size: 11px; letter-spacing: 4px; }
+            .launch-title { font-size: 28px; }
+            .launch-description { font-size: 15px; }
+            .features-grid { grid-template-columns: 1fr; gap: 12px; }
+            .feature-card { padding: 20px 16px; }
+            .download-btn { padding: 16px 28px; font-size: 16px; width: 100%; }
+            .download-section { padding: 28px 16px; }
+            .offer-banner { padding: 20px 16px; }
+            .offer-text { font-size: 14px; flex-direction: column; gap: 6px; }
+            .update-badge { font-size: 10px; }
+        }
+
+        /* ===== ZOOM LOCK ===== */
         .no-zoom {
             touch-action: pan-x pan-y;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1 class="logo">PREMIUM</h1>
-        <div class="subtitle">by SilenCoreX</div>
-    </div>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1 class="logo">PREMIUM</h1>
+            <div class="subtitle">by SilenCoreX</div>
+        </div>
 
-    <div class="launch-info">
-        <span class="update-badge"><i class="fas fa-calendar-alt"></i> 1 APRIL 2026 – MAJOR UPDATE</span>
-        <h2 class="launch-title">This Update Hits Different</h2>
-        <p class="launch-description">
-            New engine, fresh tools, and powerful upgrades. Same trusted SilenCoreX experience — now with next‑gen features.
-        </p>
-    </div>
+        <!-- UPDATE INFO -->
+        <div class="launch-info">
+            <span class="update-badge">1 April 2026 – Major Update</span>
+            <h2 class="launch-title">This Update Hits Different</h2>
+            <p class="launch-description">
+                New engine, fresh tools, and powerful upgrades. Same trusted SilenCoreX experience — now with next‑gen features.
+            </p>
+        </div>
 
-    <!-- ===== NEW FEATURES SECTION (exactly from image + design) ===== -->
-    <div class="features-section">
-        <h3 class="section-title"><i class="fas fa-sparkle"></i> New Features <i class="fas fa-sparkle"></i></h3>
-        <div class="features-grid">
-            <!-- 1. COIN SYSTEM (NEW) -->
-            <div class="feature-card">
-                <div class="new-badge">NEW</div>
-                <div class="feature-icon"><i class="fas fa-coins"></i></div>
-                <div class="feature-name">COIN SYSTEM</div>
-                <div class="feature-desc">Earn & spend loyalty coins • exclusive rewards</div>
-            </div>
-            <!-- 2. TEXT PRINTER (NEW) -->
-            <div class="feature-card">
-                <div class="new-badge">NEW</div>
-                <div class="feature-icon"><i class="fas fa-print"></i></div>
-                <div class="feature-name">TEXT PRINTER</div>
-                <div class="feature-desc">Smart printing & label maker integration</div>
-            </div>
-            <!-- 3. SECURED MESSAGE (NEW) -->
-            <div class="feature-card">
-                <div class="new-badge">NEW</div>
-                <div class="feature-icon"><i class="fas fa-lock"></i></div>
-                <div class="feature-name">SECURED MESSAGE</div>
-                <div class="feature-desc">End-to-end encrypted disappearing notes</div>
-            </div>
-            <!-- 4. PROXY BROWSER (NEW) -->
-            <div class="feature-card">
-                <div class="new-badge">NEW</div>
-                <div class="feature-icon"><i class="fas fa-globe"></i></div>
-                <div class="feature-name">PROXY BROWSER</div>
-                <div class="feature-desc">Private anonymous browsing with VPN mode</div>
-            </div>
-            <!-- 5. GROUP CHAT SYSTEM (NEW) -->
-            <div class="feature-card">
-                <div class="new-badge">NEW</div>
-                <div class="feature-icon"><i class="fas fa-users"></i></div>
-                <div class="feature-name">GROUP CHAT SYSTEM</div>
-                <div class="feature-desc">Create rooms, voice notes & admin tools</div>
+        <!-- NEW FEATURES -->
+        <div class="features-section">
+            <h3 class="section-title">New Features</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="new-badge">New</div>
+                    <div class="feature-name">Coin System</div>
+                    <div class="feature-desc">Earn & spend loyalty coins • exclusive rewards</div>
+                </div>
+                <div class="feature-card">
+                    <div class="new-badge">New</div>
+                    <div class="feature-name">Text Printer</div>
+                    <div class="feature-desc">Smart printing & label maker integration</div>
+                </div>
+                <div class="feature-card">
+                    <div class="new-badge">New</div>
+                    <div class="feature-name">Secured Message</div>
+                    <div class="feature-desc">End-to-end encrypted disappearing notes</div>
+                </div>
+                <div class="feature-card">
+                    <div class="new-badge">New</div>
+                    <div class="feature-name">Proxy Browser</div>
+                    <div class="feature-desc">Private anonymous browsing with VPN mode</div>
+                </div>
+                <div class="feature-card">
+                    <div class="new-badge">New</div>
+                    <div class="feature-name">Group Chat System</div>
+                    <div class="feature-desc">Create rooms, voice notes & admin tools</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- ===== UPDATED FEATURES SECTION (same style + mention updated) ===== -->
-    <div class="features-section">
-        <h3 class="section-title"><i class="fas fa-sync-alt"></i> Updated Features <i class="fas fa-sync-alt"></i></h3>
-        <div class="features-grid">
-            <!-- 1. MESSAGE SYSTEM (updated) -->
-            <div class="feature-card">
-                <div class="updated-badge">UPDATED</div>
-                <div class="feature-icon"><i class="fas fa-comment-dots"></i></div>
-                <div class="feature-name">MESSAGE SYSTEM</div>
-                <div class="feature-desc">Reaction support, reply threads & voice clips</div>
-            </div>
-            <!-- 2. QR GENERATOR (updated) -->
-            <div class="feature-card">
-                <div class="updated-badge">UPDATED</div>
-                <div class="feature-icon"><i class="fas fa-qrcode"></i></div>
-                <div class="feature-name">QR GENERATOR</div>
-                <div class="feature-desc">Dynamic QR with logo, scan stats & batch mode</div>
-            </div>
-            <!-- 3. AI IMAGE GENERATOR (updated) -->
-            <div class="feature-card">
-                <div class="updated-badge">UPDATED</div>
-                <div class="feature-icon"><i class="fas fa-palette"></i></div>
-                <div class="feature-name">AI IMAGE GENERATOR</div>
-                <div class="feature-desc">Flux 1.1 model • 4K upscale & style presets</div>
+        <!-- UPDATED FEATURES -->
+        <div class="features-section">
+            <h3 class="section-title">Updated Features</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="updated-badge">Updated</div>
+                    <div class="feature-name">Message System</div>
+                    <div class="feature-desc">Reaction support, reply threads & voice clips</div>
+                </div>
+                <div class="feature-card">
+                    <div class="updated-badge">Updated</div>
+                    <div class="feature-name">QR Generator</div>
+                    <div class="feature-desc">Dynamic QR with logo, scan stats & batch mode</div>
+                </div>
+                <div class="feature-card">
+                    <div class="updated-badge">Updated</div>
+                    <div class="feature-name">AI Image Generator</div>
+                    <div class="feature-desc">Flux 1.1 model • 4K upscale & style presets</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- ===== CORE EXISTING FEATURES (unchanged design, like original layout) ===== -->
-    <div class="features-section">
-        <h3 class="section-title"><i class="fas fa-crown"></i> Premium Core Tools <i class="fas fa-crown"></i></h3>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
-                <div class="feature-name">Profile System</div>
-                <div class="feature-desc">Advanced privacy controls & custom themes</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-film"></i></div>
-                <div class="feature-name">Media Player</div>
-                <div class="feature-desc">4K video playback, background audio</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-code"></i></div>
-                <div class="feature-name">HTML Editor</div>
-                <div class="feature-desc">Live coding & real-time preview</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-percentage"></i></div>
-                <div class="feature-name">Premium Offers</div>
-                <div class="feature-desc">Exclusive deals & partner discounts</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                <div class="feature-name">Performance Boost</div>
-                <div class="feature-desc">Optimize RAM & battery smart cleaner</div>
+        <!-- CORE PREMIUM TOOLS -->
+        <div class="features-section">
+            <h3 class="section-title">Premium Core Tools</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-name">Profile System</div>
+                    <div class="feature-desc">Advanced privacy controls & custom themes</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-name">Media Player</div>
+                    <div class="feature-desc">4K video playback, background audio</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-name">HTML Editor</div>
+                    <div class="feature-desc">Live coding & real-time preview</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-name">Premium Offers</div>
+                    <div class="feature-desc">Exclusive deals & partner discounts</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-name">Performance Boost</div>
+                    <div class="feature-desc">Optimize RAM & battery smart cleaner</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- DOWNLOAD SECTION - SAME POSITION & STYLE -->
-    <div class="download-section">
-        <button class="download-btn" id="downloadBtn">
-            <i class="fas fa-download"></i> DOWNLOAD NOW
-        </button>
-        <div class="download-info">
-            <i class="fas fa-shield-alt"></i> Secure Download • 100% Safe • 36MB • v2.0 (1 April 2026)
+        <!-- DOWNLOAD -->
+        <div class="download-section">
+            <button class="download-btn" id="downloadBtn">Download Now</button>
+            <div class="download-info">
+                <span>Secure Download · 100% Safe · 36MB · v2.03(19 September 2026)</span>
+            </div>
         </div>
-    </div>
-
-    <!-- BLUE TICK OFFER banner (as original) -->
-    <div class="offer-banner">
-        <div class="offer-text">
-            <i class="fas fa-check-circle"></i>
-            <span>First 100 users receive verified blue tick status – update exclusive</span>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="copyright">
-            © 2026 <span class="company">SilenCoreX Technologies</span>
-        </div>
-        <div style="margin-top: 10px; color: #555; font-size: 13px;">
-            PREMIUM is a trademark of SilenCoreX | Update 1.04.2026
-        </div>
-    </div>
-</div>
-
-<script>
-    (function() {
-        // === DOWNLOAD BUTTON INTERACTION ===
-const downloadBtn = document.getElementById('downloadBtn');
-let isProcessing = false;
-
-function showMessage(text, isSuccess = true) {
-    const toast = document.createElement('div');
-    toast.className = 'toast-notify';
-
-    const icon = isSuccess
-        ? '<i class="fas fa-check-circle" style="margin-right: 8px;"></i>'
-        : '<i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>';
-
-    toast.innerHTML = icon + text;
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-        toast.style.animation = 'slideOut 0.25s ease-out forwards';
-        setTimeout(() => toast.remove(), 300);
-    }, 3000);
-}
-
-function startDownload() {
-    if (isProcessing) return;
-
-    isProcessing = true;
-
-    const originalHTML = downloadBtn.innerHTML;
-
-    downloadBtn.innerHTML =
-        '<i class="fas fa-spinner fa-spin"></i> PREPARING UPDATE...';
-
-    downloadBtn.disabled = true;
-    downloadBtn.style.opacity = '0.8';
-
-    // Direct download link
-    const downloadUrl =
-        'https://www.dropbox.com/scl/fi/3s7htvpeohukfmc9qug13/Premium_release.apk?rlkey=exh6vlmbzs6l1844fi9mwe498&dl=1';
-
-    // Download start
-    window.location.href = downloadUrl;
-
-    setTimeout(() => {
-        downloadBtn.innerHTML =
-            '<i class="fas fa-check"></i> UPDATE STARTED';
-
-        downloadBtn.style.background =
-            'linear-gradient(135deg, #4CAF50, #45a049)';
-
-        showMessage(
-            'Download started! New SilenCoreX v3.0 incoming 🚀',
-            true
-        );
-
-        setTimeout(() => {
-            downloadBtn.innerHTML = originalHTML;
-            downloadBtn.disabled = false;
-            downloadBtn.style.opacity = '1';
-            downloadBtn.style.background =
-                'linear-gradient(135deg, #1DA1F2, #1A8CD8)';
-
-            isProcessing = false;
-        }, 2800);
-    }, 500);
-}
-
-downloadBtn.addEventListener('click', startDownload);
 
         
-        // === DISABLE ZOOM + PREVENT PINCH ZOOM ===
-        document.addEventListener('wheel', function(e) {
-            if (e.ctrlKey) {
-                e.preventDefault();
-                return false;
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="copyright">
+                © 2026 <span class="company">SilenCoreX Technologies</span>
+            </div>
+            <div style="margin-top: 8px; color: #444; font-size: 13px;">
+                PREMIUM is a trademark of SilenCoreX · Update 19.09.2026
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // === DOWNLOAD BUTTON — CLEAN, NO EMOJI ===
+            const downloadBtn = document.getElementById('downloadBtn');
+            let isProcessing = false;
+
+            function showToast(text, isSuccess = true) {
+                const toast = document.createElement('div');
+                toast.className = 'toast-notify';
+                toast.textContent = text;
+                document.body.appendChild(toast);
+
+                setTimeout(() => {
+                    toast.style.animation = 'slideOut 0.25s ease-out forwards';
+                    setTimeout(() => toast.remove(), 300);
+                }, 3200);
             }
-        }, { passive: false });
-        
-        document.addEventListener('touchstart', function(e) {
-            if (e.touches.length > 1) {
-                e.preventDefault();
-            }
-        }, { passive: false });
-        
-        // gesture start for iOS
-        document.addEventListener('gesturestart', function(e) {
-            e.preventDefault();
-        });
-        
-        // right click disabled (optional but same as original)
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
 
-        // also prevent zoom via keyboard (cmd+/ctrl +)
-        window.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
-                e.preventDefault();
-            }
-        });
+            function startDownload() {
+                if (isProcessing) return;
+                isProcessing = true;
 
-        // console greeting for April update
-        console.log('✨ PREMIUM v2.0 — April 1, 2026 update');
-        console.log('✅ New: Coin System, Text Printer, Secured Message, Proxy Browser, Group Chat');
-        console.log('✅ Updated: Message System, QR Generator, AI Image Generator');
-        console.log('⚡ Legacy core features untouched, design consistent');
-    })();
-</script>
+                const originalText = downloadBtn.textContent;
+
+                downloadBtn.textContent = 'Preparing update...';
+                downloadBtn.disabled = true;
+
+                // direct download link
+                const downloadUrl = 'https://files.catbox.moe/wy0gs3.apk?rlkey=exh6vlmbzs6l1844fi9mwe498&dl=1';
+
+                window.location.href = downloadUrl;
+
+                setTimeout(() => {
+                    downloadBtn.textContent = 'Update started';
+                    showToast('Download started. New SilenCoreX v3.0 incoming.', true);
+
+                    setTimeout(() => {
+                        downloadBtn.textContent = originalText;
+                        downloadBtn.disabled = false;
+                        isProcessing = false;
+                    }, 2600);
+                }, 500);
+            }
+
+            downloadBtn.addEventListener('click', startDownload);
+
+            // === ZOOM PREVENTION ===
+            document.addEventListener('wheel', function(e) {
+                if (e.ctrlKey) e.preventDefault();
+            }, { passive: false });
+
+            document.addEventListener('touchstart', function(e) {
+                if (e.touches.length > 1) e.preventDefault();
+            }, { passive: false });
+
+            document.addEventListener('gesturestart', function(e) {
+                e.preventDefault();
+            });
+
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+            window.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+                    e.preventDefault();
+                }
+            });
+
+            // clean console greeting
+            console.log('PREMIUM v2.3 — 19 September 2026 update ready.');
+        })();
+    </script>
 </body>
 </html>
